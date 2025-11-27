@@ -8,7 +8,6 @@ using OpenTK.Graphics.OpenGL;
 
 namespace SlotMachineFinal
 {
-    // --- PARTEA 1: INTERFAȚA CU BUTOANE ---
     public partial class Form1 : Form
     {
         public Form1()
@@ -23,20 +22,16 @@ namespace SlotMachineFinal
 
         private void btnSpin_Click(object sender, EventArgs e)
         {
-            // Setări
-            int spins = 20; // Câte schimbări de imagine să facă
+            int spins = 20; 
             if (numCycles != null) spins = (int)numCycles.Value;
             if (spins < 5) spins = 20; // Siguranță
 
             this.Hide();
 
-            // Lansăm fereastra. Nu mai înmulțim cu 10 pentru că gestionăm durata altfel acum.
-            // Transmitem numărul de "schimbări" de imagine dorite.
             using (SlotWindow game = new SlotWindow(spins))
             {
-                game.Run(60.0); // 60 FPS
+                game.Run(60.0); 
 
-                // Mesajul apare DUPĂ ce fereastra s-a închis (adică după ce ai văzut rezultatul)
                 if (game.Won)
                     MessageBox.Show("JACKPOT! Ai câștigat!", "Rezultat");
                 else
@@ -50,12 +45,11 @@ namespace SlotMachineFinal
         private void numCycles_ValueChanged(object sender, EventArgs e) { }
     }
 
-    // --- PARTEA 2: FEREASTRA OPENGL (JOCUL) ---
     class SlotWindow : GameWindow
     {
-        int _spinsLeft;          // Câte schimbări de imagine au mai rămas
-        int _cooldown = 180;     // Timp de așteptare la final (180 cadre = 3 secunde)
-        int _frameSkipCounter = 0; // Contor pentru încetinire
+        int _spinsLeft;         
+        int _cooldown = 180;    
+        int _frameSkipCounter = 0; 
 
         int[] _slots = { 0, 0, 0 };
         int[] _textureIds = new int[4];
@@ -90,27 +84,22 @@ namespace SlotMachineFinal
         protected override void OnUpdateFrame(FrameEventArgs e)
         {
             base.OnUpdateFrame(e);
-
-            // STADIUL 1: ÎNVÂRTIRE
             if (_spinsLeft > 0)
             {
                 _frameSkipCounter++;
 
-                // Schimbăm imaginile doar o dată la 5 cadre (încetinim animația)
                 if (_frameSkipCounter >= 5)
                 {
                     _slots[0] = _rand.Next(0, 4);
                     _slots[1] = _rand.Next(0, 4);
                     _slots[2] = _rand.Next(0, 4);
 
-                    _spinsLeft--;       // Scădem un "spin"
-                    _frameSkipCounter = 0; // Resetăm contorul
+                    _spinsLeft--;      
+                    _frameSkipCounter = 0; 
                 }
             }
-            // STADIUL 2: STOP ȘI AFIȘARE REZULTAT
             else
             {
-                // Prima dată când intrăm aici, verificăm dacă a câștigat
                 if (_cooldown == 180)
                 {
                     if (_slots[0] == _slots[1] && _slots[1] == _slots[2])
@@ -119,10 +108,8 @@ namespace SlotMachineFinal
                         Won = false;
                 }
 
-                // Așteptăm 3 secunde (scădem din cooldown)
                 _cooldown--;
 
-                // Doar când trece timpul, închidem fereastra
                 if (_cooldown <= 0)
                 {
                     this.Exit();
@@ -153,7 +140,6 @@ namespace SlotMachineFinal
             else
             {
                 GL.Disable(EnableCap.Texture2D);
-                // Culori fallback ca să vezi că se mișcă ceva
                 if (texIndex == 0) GL.Color3(Color.Red);
                 else if (texIndex == 1) GL.Color3(Color.Yellow);
                 else if (texIndex == 2) GL.Color3(Color.Green);
