@@ -1,0 +1,16 @@
+C:\Users\Beno\source\repos\SlotMachineFinal\SlotMachineFinal\bin\Debug\SlotMachineFinal.exe.config
+C:\Users\Beno\source\repos\SlotMachineFinal\SlotMachineFinal\bin\Debug\SlotMachineFinal.exe
+C:\Users\Beno\source\repos\SlotMachineFinal\SlotMachineFinal\bin\Debug\SlotMachineFinal.pdb
+C:\Users\Beno\source\repos\SlotMachineFinal\SlotMachineFinal\bin\Debug\OpenTK.dll
+C:\Users\Beno\source\repos\SlotMachineFinal\SlotMachineFinal\bin\Debug\OpenTK.GLControl.dll
+C:\Users\Beno\source\repos\SlotMachineFinal\SlotMachineFinal\bin\Debug\OpenTK.xml
+C:\Users\Beno\source\repos\SlotMachineFinal\SlotMachineFinal\bin\Debug\OpenTK.GLControl.xml
+C:\Users\Beno\source\repos\SlotMachineFinal\SlotMachineFinal\obj\Debug\SlotMachineFinal.csproj.AssemblyReference.cache
+C:\Users\Beno\source\repos\SlotMachineFinal\SlotMachineFinal\obj\Debug\SlotMachineFinal.Form1.resources
+C:\Users\Beno\source\repos\SlotMachineFinal\SlotMachineFinal\obj\Debug\SlotMachineFinal.Properties.Resources.resources
+C:\Users\Beno\source\repos\SlotMachineFinal\SlotMachineFinal\obj\Debug\SlotMachineFinal.csproj.GenerateResource.cache
+C:\Users\Beno\source\repos\SlotMachineFinal\SlotMachineFinal\obj\Debug\SlotMachineFinal.csproj.CoreCompileInputs.cache
+C:\Users\Beno\source\repos\SlotMachineFinal\SlotMachineFinal\obj\Debug\SlotMach.7A577036.Up2Date
+C:\Users\Beno\source\repos\SlotMachineFinal\SlotMachineFinal\obj\Debug\SlotMachineFinal.exe
+C:\Users\Beno\source\repos\SlotMachineFinal\SlotMachineFinal\obj\Debug\SlotMachineFinal.pdb
+C:\Users\Beno\source\repos\SlotMachineFinal\SlotMachineFinal\obj\Debug\SlotMachineFinal.exe.config
