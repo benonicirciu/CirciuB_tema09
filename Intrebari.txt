@@ -1,0 +1,15 @@
+	Utilizați pentru texturare imagini cu transparență și fără. Ce observați?
+	Fara transparenta: Acopera tot obiectul cu poza; cu tranparenta: dac functia de bleeding este activata se vede transparenta, daca nu, se vede alb sau negru.
+	
+	Ce formate de imagine pot fi aplicate în procesul de texturare în
+OpenGL?
+	Cele mai comune sunt BMP, PNG, JPG si TGA
+	
+	Specificați ce se întâmplă atunci când se modifică culoarea (prin
+manipularea canalelor RGB) obiectului texturat.
+	Textura va capata o tenta a acelei culori puse. Daca e alb se vede normal.
+
+	Ce deosebiri există între scena ce utilizează obiecte texturate în modul
+iluminare activat, respectiv dezactivat?
+	Activat: Apar umbre pe partile opuse si apare efectul de 3D
+	Dezactivat: Obiectul pare plat, fara umbre
